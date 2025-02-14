@@ -11,12 +11,12 @@ const Hero = () => {
       </div>
 
       <h1 className="hero-title">
-        Build faster with beautiful components
+        Plan faster with AI Travel Planner
       </h1>
       
       <p className="hero-description">
-        Premium UI components built with React and Tailwind CSS.
-        Save time and ship your next project faster with our ready-to-use components.
+      AI-powered travel planning made simple.
+      Save time and explore the world effortlessly with personalized itineraries tailored to your preferences.
       </p>
 
       <div className="cta-container">
