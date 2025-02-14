@@ -5,7 +5,7 @@
 }
 
 .input-group {
-  margin-bottom: 1rem;
+  margin-bottom: 2rem;
 }
 
 .input-group label {
@@ -14,7 +14,8 @@
 }
 
 .input-group input {
-  width: 100%;
+  width: 50%;
+  display: block;
   padding: 0.5rem;
   font-size: 1rem;
   border: 1px solid #ccc;
@@ -63,4 +64,27 @@ button:disabled {
 .app {
   min-height: 100vh;
   background-color: black;
+}
+
+.planner-container {
+  max-width: 800px;
+  margin: 6rem auto 0;
+  padding: 2rem;
+  width: 100%;
+  background-color: #1A1A40;
+  border-radius: 1rem;
+}
+
+#planner-section {
+  margin-bottom: 3rem;
+  background: linear-gradient(
+    to right,
+    rgb(255, 255, 255) 0%,
+    rgb(255, 255, 255) 15%,
+    rgba(255, 255, 255, 0.85) 30%,
+    rgba(255, 255, 255, 0.7) 100%
+  );
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
 }

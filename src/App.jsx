@@ -34,58 +34,65 @@ function App() {
   return (
     <div className="app">
       <Hero />
-      <h1>AI Travel Planner</h1>
-      
-      <form onSubmit={handleSubmit}>
-        <div className="input-group">
-          <label htmlFor="destination">Where do you want to go?</label>
-          <input
-            type="text"
-            id="destination"
-            value={destination}
-            onChange={(e) => setDestination(e.target.value)}
-            placeholder="Enter destination"
-            required
-          />
-        </div>
+      <div className="planner-container">
+        <h1 
+          id="planner-section" 
+          className="text-4xl font-bold text-center text-white"
+        >
+          AI Travel Planner
+        </h1>
+        
+        <form onSubmit={handleSubmit}>
+          <div className="input-group">
+            <label htmlFor="destination">Where do you want to go?</label>
+            <input
+              type="text"
+              id="destination"
+              value={destination}
+              onChange={(e) => setDestination(e.target.value)}
+              placeholder="Enter destination"
+              required
+            />
+          </div>
 
-        <div className="input-group">
-          <label htmlFor="budget">Budget (MYR)</label>
-          <input
-            type="number"
-            id="budget"
-            value={preferences.budget}
-            onChange={(e) => setPreferences({...preferences, budget: e.target.value})}
-            placeholder="Enter your budget in MYR"
-            required
-          />
-        </div>
+          <div className="input-group">
+            <label htmlFor="budget">Budget (MYR)</label>
+            <input
+              type="number"
+              id="budget"
+              value={preferences.budget}
+              onChange={(e) => setPreferences({...preferences, budget: e.target.value})}
+              placeholder="Enter your budget in MYR"
+              required
+            />
+          </div>
 
-        <div className="input-group">
-          <label htmlFor="duration">Duration (days)</label>
-          <input
-            type="number"
-            id="duration"
-            value={preferences.duration}
-            onChange={(e) => setPreferences({...preferences, duration: e.target.value})}
-            placeholder="Number of days"
-            required
-          />
-        </div>
+          <div className="input-group">
+            <label htmlFor="duration">Duration (days)</label>
+            <input
+              type="number"
+              id="duration"
+              value={preferences.duration}
+              onChange={(e) => setPreferences({...preferences, duration: e.target.value})}
+              placeholder="Number of days"
+              required
+            />
+          </div>
 
-        <button type="submit" disabled={loading}>
-          {loading ? 'Generating...' : 'Generate Itinerary'}
-        </button>
-      </form>
+          <button type="submit" disabled={loading}>
+            {loading ? 'Generating...' : 'Generate Itinerary'}
+          </button>
+        </form>
 
-      {destination && <TravelMap destination={destination} />}
+        {destination && <TravelMap destination={destination} />}
 
-      {itinerary && (
-        <div className="itinerary-result">
-          <h2>Your Itinerary</h2>
-          <pre>{itinerary}</pre>
-        </div>
-      )}
+        {itinerary && (
+          <div className="itinerary-result">
+            <h2>Your Itinerary</h2>
+            <pre>{itinerary}</pre>
+          </div>
+        )}
+      </div>
     </div>
   )
 }
