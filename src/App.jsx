@@ -2,6 +2,7 @@ import { useState } from 'react'
 import './App.css'
 import { generateItinerary } from './utils/gemini'
 import TravelMap from './components/TravelMap'
+import Hero from './components/Hero'
 
 function App() {
   const [destination, setDestination] = useState('');
@@ -31,7 +32,8 @@ function App() {
   };
 
   return (
-    <div className="container">
+    <div className="app">
+      <Hero />
       <h1>AI Travel Planner</h1>
       
       <form onSubmit={handleSubmit}>

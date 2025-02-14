@@ -59,3 +59,8 @@ button:disabled {
   background-color: #cccccc;
   cursor: not-allowed;
 }
+
+.app {
+  min-height: 100vh;
+  background-color: black;
+}
